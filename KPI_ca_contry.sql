@@ -1,8 +1,8 @@
 
  -- CA pour les 5 derniers mois/pays 
 
-CREATE VIEW camonth_contry_vw AS
-SELECT 
+CREATE VIEW ca_month_country_vw AS
+(SELECT 
     c.country,
     YEAR(o.orderDate) AS orderYear,
     MONTH(o.orderDate) AS orderMonth,
@@ -18,5 +18,5 @@ WHERE
 GROUP BY 
     c.country, YEAR(o.orderDate), MONTH(o.orderDate)
 ORDER BY 
-    c.country, orderYear, orderMonth;
+    c.country, orderYear, orderMonth);
 
