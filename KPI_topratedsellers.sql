@@ -1,6 +1,6 @@
 -- CA DEUX MEILLEURS VENDEURS MENSUEL AVEC CLASSEMENT (colonne nom prenom reunie)
 CREATE VIEW CA_topratedsellers_vw AS
-WITH MonthlySales AS (
+(WITH MonthlySales AS (
     SELECT 
         e.employeeNumber, 
         e.lastName AS lastname_employe,
@@ -34,4 +34,4 @@ SELECT
     rs.classement
 FROM RankedSales rs
 WHERE rs.classement <= 2
-ORDER BY rs.year DESC, rs.mois DESC, rs.classement;
+ORDER BY rs.year DESC, rs.mois DESC, rs.classement);
