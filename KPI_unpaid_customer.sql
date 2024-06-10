@@ -1,6 +1,6 @@
 -- Impayés
 CREATE VIEW unpaid_customer_vw AS
-SELECT
+(SELECT
     c.customerNumber,
     c.customerName,
     COALESCE(totalOrdersData.totalOrders, 0) AS totalOrders,
@@ -33,4 +33,4 @@ LEFT JOIN (
         p.customerNumber
 ) AS paymentsData ON c.customerNumber = paymentsData.customerNumber
 ORDER BY
-    c.customerNumber;
+    c.customerNumber);
