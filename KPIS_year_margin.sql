@@ -1,6 +1,6 @@
--- Marge BRUTE/par trimestre
+-- Marge BRUTE/par an
 
-CREATE VIEW trimester_margin_vw AS
+CREATE VIEW year_margin_vw AS
 (SELECT YEAR(o.orderDate) AS year,
 SUM((od.priceEach - p.buyPrice) * od.quantityOrdered) AS grossMargin
 FROM 
