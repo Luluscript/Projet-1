@@ -110,15 +110,15 @@ GROUP BY
 ORDER BY 
     p.productLine, month;
 
--- STOCK TOP 5
 
-SELECT YEAR(o.orderDate) as orderYear, p.productLine, p.productName, SUM(od.quantityOrdered) as totalSold, p.quantityInStock
+-- top 5 +  stock en cumulés
+SELECT p.productCode, p.productName, p.productLine, p.quantityInStock, SUM(od.quantityOrdered) AS total_ventes
 FROM products p
 JOIN orderdetails od ON p.productCode = od.productCode
-JOIN orders o ON od.orderNumber = o.orderNumber
-GROUP BY orderYear, p.productCode
-ORDER BY totalSold DESC
+GROUP BY p.productCode, p.productName, p.productLine, p.quantityInStock
+ORDER BY total_ventes DESC
 LIMIT 5;
+
 
 -- CA 5 DERNIERS MOIS PAR PAYS
 SELECT 
