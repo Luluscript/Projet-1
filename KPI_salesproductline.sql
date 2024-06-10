@@ -1,7 +1,7 @@
 
 -- Ventes Gamme n vs n-1 
 CREATE VIEW sales_productline_year_vw AS
-SELECT 
+(SELECT 
     p.productLine,
     MONTH(o.orderDate) AS month,
     SUM(CASE WHEN YEAR(o.orderDate) = 2022 THEN od.quantityOrdered ELSE 0 END) AS totalQuantityOrdered_2022,
@@ -32,4 +32,4 @@ JOIN
 GROUP BY 
     p.productLine, MONTH(o.orderDate)
 ORDER BY 
-    p.productLine, month;
+    p.productLine, month);
