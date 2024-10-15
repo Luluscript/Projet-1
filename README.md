@@ -1,5 +1,15 @@
 # Projet-1
           
+Missionnes pas une societe de vente de maquettes et de modele reduits, nous devions acceder a la Base de donnees afin de creer un tableau de bord.
+Ce dernier doit etre composes de differents KPI que nous devions crees autour de 4 Themes principaux:
+- Ventes
+- Finances
+- Logistique
+- Ressources Humaines
+
+Competences: SQL, PowerBi
+
+
  Le marché du Modélisme 
 
 Ce terme englobe les divers segments tels que le modélisme ferroviaire, le modélisme aérien, le modélisme automobile, le modélisme naval, ainsi que la création de dioramas et de figurines. Le modélisme peut être une activité de loisir, un passe-temps pour les collectionneurs, ou un outil éducatif et professionnel pour des présentations et des projets architecturaux.
